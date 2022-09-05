@@ -734,7 +734,7 @@
 					"sources": [
 						{
 							"dataset": {
-								"referenceName": "Synpase_NYC_Payroll_Data",
+								"referenceName": "SQLDB_NYC_Payroll_Data",
 								"type": "DatasetReference"
 							},
 							"name": "SynpaseNYCPayrollData"
@@ -798,8 +798,7 @@
 						"     allowSchemaDrift: true,",
 						"     validateSchema: false,",
 						"     isolationLevel: 'NONE',",
-						"     format: 'table',",
-						"     staged: true) ~> SynpaseNYCPayrollData",
+						"     format: 'table') ~> SynpaseNYCPayrollData",
 						"source(output(",
 						"          FiscalYear as integer,",
 						"          PayrollNumber as integer,",
@@ -853,7 +852,7 @@
 				}
 			},
 			"dependsOn": [
-				"[concat(variables('factoryId'), '/datasets/Synpase_NYC_Payroll_Data')]",
+				"[concat(variables('factoryId'), '/datasets/SQLDB_NYC_Payroll_Data')]",
 				"[concat(variables('factoryId'), '/datasets/adls_history_payroll')]",
 				"[concat(variables('factoryId'), '/datasets/Synapse_NYC_Payroll_Summary')]"
 			]

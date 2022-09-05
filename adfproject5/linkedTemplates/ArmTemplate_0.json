@@ -847,6 +847,7 @@
 						"     allowCopyCommand: true,",
 						"     skipDuplicateMapInputs: true,",
 						"     skipDuplicateMapOutputs: true,",
+						"     saveOrder: 1,",
 						"     errorHandlingOption: 'stopOnFirstError') ~> loadpayrollsummarry"
 					]
 				}
